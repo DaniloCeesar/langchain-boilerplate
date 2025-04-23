@@ -10,8 +10,8 @@ load_dotenv()
 llm = ChatOllama(model=os.getenv("OLLAMA_MODEL"), base_url=os.getenv("OLLAMA_BASE_URL"))
 
 
-def generate_sync_response(city: str):
-    template = "How’s the weather in {city}?"
+def generate_sync_response(city: str = "Brasília"):
+    template = f"How’s the weather in {city}?"
 
     prompt = ChatPromptTemplate.from_template(template=template)
     chain = prompt | llm | StrOutputParser()
