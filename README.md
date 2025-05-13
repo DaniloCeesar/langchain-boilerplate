@@ -33,7 +33,7 @@ This repository provides a simple chat implementation, to interact with local La
 
 ### Build instructions
 
-1. You will need a **Ollama** server up and running, with at least one model locally available (**Please read their [instructions for quickstart](https://github.com/ollama/ollama/)**);
+1. You will need a **Ollama** container up and running, with at least one model locally available (**You can check their [official Docker image](https://hub.docker.com/r/ollama/ollama/)** for quickstart: e.g. `docker run -d -v ollama:/root/.ollama -p 11434:11434 --name ollama ollama/ollama` for running a CPU only image with **Docker**);
 2. `git clone https://github.com/DaniloCeesar/langchain-boilerplate.git` — clone this repository into a new directory;
 3. `cd langchain-boilerplate` — change the current directory to this project source code;
 4. `cp .env.example .env` — generate a new environment file that will contain your project's environment variables (**Please remember to replace it with your own settings**);
